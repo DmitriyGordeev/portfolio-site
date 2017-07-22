@@ -1,0 +1,12 @@
+
+* {
+    color: #274249;
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 80px;
+    background: #90d3a2;
+}
