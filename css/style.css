@@ -34,11 +34,12 @@ footer {
 }
 
 #main-blank {
-    background: #669999;
+    background: #00aaa0;
     width: 70%;
     height: 100%;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 
 .h-menu {
@@ -57,4 +58,12 @@ footer {
     margin: 30px 0;
     font-size: 18px;
     font-weight: 800;
+}
+
+.box {
+    background: #8ed2c9;
+    width: 80%;
+    height: 200px;
+    margin: 20px auto 0;
+
 }
