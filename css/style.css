@@ -61,9 +61,32 @@ footer {
 }
 
 .box {
-    background: #8ed2c9;
+    /*background: #8ed2c9;*/
     width: 80%;
     height: 200px;
     margin: 20px auto 0;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
 
+img {
+    width: 300px;
+    display: inline-block;
+}
+
+.text-box {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    vertical-align: top;
+    text-align: center;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.text-box .text-box-description {
+    display: block;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 200;
 }
