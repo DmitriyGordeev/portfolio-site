@@ -149,11 +149,17 @@ main {
     font-size: 25px;
 }
 
+#gallery-stripe {
+    height: 210px;
+    background: #2fc58c;
+    overflow: hidden;
+}
+
 .h-menu {
     list-style: none;
     min-width: 500px;
     max-width: 80%;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 .h-menu li {
@@ -168,8 +174,9 @@ main {
 #gallery-list img {
     display: inline-block;
     height: 100%;
-    border: 3px solid var(--dark-blue);
+    border: 6px solid #34344a;
     box-sizing: border-box;
+    /*border-radius: 3px;*/
 }
 
 /* testing reference: */
