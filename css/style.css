@@ -1,9 +1,9 @@
 
 :root {
     --dark-blue: #242434;
-    --light-red: #ee5361;
-    --light-green: #2fc58c;
-    --light-blue: #4169a6;
+    --light-red: #ee293f;
+    --light-green: #31d195;
+    --light-blue: #1a32b4;
     --light-yellow: #d2cf6e;
 }
 
@@ -97,8 +97,6 @@ header {
     border-radius: 5px;
 }
 
-
-
 main {
     background: #eeeeee;
     width: 100%;
@@ -108,9 +106,9 @@ main {
 
 .blank-container {
     width: 80%;
-    height: 300px;
+    height: 270px;
     position: relative;
-    margin: 50px auto;
+    margin: 50px auto 0;
     /*background: red;*/
 }
 
@@ -151,6 +149,29 @@ main {
     font-size: 25px;
 }
 
+.h-menu {
+    list-style: none;
+    min-width: 500px;
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.h-menu li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 180px;
+    color: var(--dark-blue);
+}
+
+#gallery-list img {
+    display: inline-block;
+    height: 100%;
+    border: 3px solid var(--dark-blue);
+    box-sizing: border-box;
+}
+
 /* testing reference: */
 a {
     font-size: 21px;
@@ -164,4 +185,6 @@ a:hover {
     transition-duration: 0.4s;
     text-decoration: underline;
 }
+
+
 
