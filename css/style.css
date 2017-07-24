@@ -70,21 +70,21 @@ header {
 #top-menu li:nth-of-type(1) span:hover {
     transition-duration: 0.4s;
     color: var(--light-red);
-    border: 5px solid var(--light-red);
+    border: 3px solid var(--light-red);
     cursor: pointer;
 }
 
 #top-menu li:nth-of-type(2) span:hover {
     transition-duration: 0.4s;
     color: var(--light-green);
-    border: 5px solid var(--light-green);
+    border: 3px solid var(--light-green);
     cursor: pointer;
 }
 
 #top-menu li:nth-of-type(3) span:hover {
     transition-duration: 0.4s;
     color: var(--light-blue);
-    border: 5px solid var(--light-blue);
+    border: 3px solid var(--light-blue);
     cursor: pointer;
 }
 /* ------------------------------------------- */
@@ -95,4 +95,23 @@ header {
     margin: 70px auto 0;
     background: var(--dark-blue);
     border-radius: 5px;
+}
+
+
+main {
+    background: #eeeeee;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    background: #2fc58c;
+
+    transform: rotate(45deg);
+
 }
