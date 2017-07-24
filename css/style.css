@@ -92,7 +92,7 @@ header {
 #h-line {
     width: 80%;
     height: 4px;
-    margin: 70px auto 0;
+    margin: 80px auto 0;
     background: var(--dark-blue);
     border-radius: 5px;
 }
