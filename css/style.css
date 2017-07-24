@@ -102,15 +102,17 @@ main {
     background: #eeeeee;
     width: 100%;
     height: calc(100% - 100px);
+    overflow: hidden;
 }
 
 .box {
     width: 100px;
     height: 100px;
     position: relative;
-    top: 100px;
-    left: 100px;
+    top: 60px;
+    left: 170px;
     background: #2fc58c;
+    display: inline-block;
 }
 
 .romb {
@@ -128,4 +130,21 @@ main {
     font-weight: 800;
     margin: auto auto;
     transform: rotate(-45deg);
+}
+
+.blank-container {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    margin: 50px auto;
+    /*background: red;*/
+}
+
+.text-container {
+    display: inline-block;
+    background: #eeeeee;
+    position: relative;
+    left: 300px;
+    top: 20px;
+    font-size: 25px;
 }
