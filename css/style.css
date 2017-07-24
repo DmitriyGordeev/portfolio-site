@@ -141,10 +141,11 @@ main {
 }
 
 .text-container {
+    vertical-align: top;
     display: inline-block;
     background: #eeeeee;
     position: relative;
     left: 300px;
-    top: 20px;
+    top: 40px;
     font-size: 25px;
 }
