@@ -1,4 +1,8 @@
 
+:root {
+    --main-color: #eeeeee;
+}
+
 * {
     color: #274249;
     padding: 0;
@@ -11,82 +15,6 @@ html, body {
     height: 100%;
 }
 
-header {
-    height: 130px;
-}
-
-main {
-    height: calc(100% - 180px);
-}
-
-footer {
-    height: 0;
-}
-
-#row-menu {
-    background: #FF3333;
-    margin: 0 auto;
-    height: 80px;
-    width: 70%;
-    max-width: 1200px;
-    position: relative;
-    top: 30px;
-}
-
-#main-blank {
-    background: #00aaa0;
-    width: 70%;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.h-menu {
-    list-style: none;
-    margin: 0 auto;
-    width: 500px;
-    height: 100%;
-}
-
-.h-menu li {
-    display: inline-block;
-    width: 30%;
-    height: 100%;
-    text-align: center;
-    color: white;
-    margin: 30px 0;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.box {
-    /*background: #8ed2c9;*/
-    width: 80%;
-    height: 200px;
-    margin: 20px auto 0;
-    padding: 15px 20px;
-    box-sizing: border-box;
-}
-
-img {
-    width: 300px;
-    display: inline-block;
-}
-
-.text-box {
-    display: inline-block;
-    font-size: 17px;
-    font-weight: 700;
-    vertical-align: top;
-    text-align: center;
-    width: 300px;
-    margin-left: 20px;
-}
-
-.text-box .text-box-description {
-    display: block;
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: 200;
+#page-viewport {
+    border: 5px solid var(--main-color);
 }
