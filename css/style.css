@@ -98,11 +98,20 @@ header {
 }
 
 
+
 main {
     background: #eeeeee;
     width: 100%;
     height: calc(100% - 100px);
     overflow: hidden;
+}
+
+.blank-container {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    margin: 50px auto;
+    /*background: red;*/
 }
 
 .box {
@@ -132,14 +141,6 @@ main {
     transform: rotate(-45deg);
 }
 
-.blank-container {
-    width: 80%;
-    height: 300px;
-    position: relative;
-    margin: 50px auto;
-    /*background: red;*/
-}
-
 .text-container {
     vertical-align: top;
     display: inline-block;
@@ -149,3 +150,19 @@ main {
     top: 40px;
     font-size: 25px;
 }
+
+
+/* testing reference: */
+a {
+    font-size: 21px;
+    text-decoration: none;
+    padding: 5px 0px;
+    transition-duration: 0.4s;
+    color: #2fc58c;
+}
+
+a:hover {
+    transition-duration: 0.4s;
+    text-decoration: underline;
+}
+
