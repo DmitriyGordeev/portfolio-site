@@ -3,7 +3,7 @@
     --dark-blue: #242434;
     --light-red: #ee5361;
     --light-green: #2fc58c;
-    --light-blue: #41a69e;
+    --light-blue: #4169a6;
     --light-yellow: #d2cf6e;
 }
 
@@ -111,7 +111,21 @@ main {
     top: 100px;
     left: 100px;
     background: #2fc58c;
+}
 
+.romb {
+    padding: 39px 0;
+    box-sizing: border-box;
     transform: rotate(45deg);
+}
 
+.inner-romb {
+    position: relative;
+    color: white;
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    margin: auto auto;
+    transform: rotate(-45deg);
 }
