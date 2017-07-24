@@ -1,6 +1,9 @@
 
 :root {
     --dark-blue: #242434;
+    --light-red: #ee5361;
+    --light-green: #2fc58c;
+    --light-blue: #50d8d0;
 }
 
 * {
@@ -35,16 +38,44 @@ header {
 #top-menu {
     list-style: none;
     width: 500px;
-    margin: 40px auto;
+    margin: 10px auto;
 }
 
 #top-menu li {
     display: inline-block;
     float: left;
     text-align: center;
-    width: 30%;
+    width: 33%;
     color: var(--dark-blue);
     font-weight: 700;
-    border: 3px solid var(--dark-blue);
     padding: 10px 0;
+    font-size: 15px;
 }
+
+.bordered-span {
+    border: 2px solid var(--dark-blue);
+    display: block;
+    width: 80%;
+    padding: 9px 0 7px;
+}
+
+/* ------------------------------------------- */
+/* coloring top menu buttons: */
+#top-menu span:nth-of-type(1):hover {
+    transition-duration: 0.2s;
+    color: var(--light-red);
+    border: 2px solid var(--light-red);
+}
+
+#top-menu span:nth-of-type(2):hover {
+    transition-duration: 0.2s;
+    color: var(--light-green);
+    border: 2px solid var(--light-green);
+}
+
+#top-menu span:nth-of-type(3):hover {
+    transition-duration: 0.2s;
+    color: var(--light-blue);
+    border: 2px solid var(--light-blue);
+}
+/* ------------------------------------------- */
