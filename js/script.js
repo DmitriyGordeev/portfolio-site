@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
     // gallery-stripe:
     var stripes = jQuery(".gallery-stripe");
     for(var i = 1; i < stripes.length; i++) {
-        stripes.eq(i).css({ width: 0, visibility: "hidden"});
+        stripes.eq(i).css({ width: 0, opacity: 0});
     }
 
 
@@ -26,11 +26,12 @@ jQuery(document).ready(function() {
 
 
         // gallery-stripe:
-        var sw = jQuery(".gallery-stripe:nth-of-type(1)").width();
-        jQuery(".gallery-stripe:nth-of-type(1)").animate({ width: 0, opacity: 0 });
+        var sw = jQuery("#stripe-1").width();
+        jQuery("#stripe-1 img").animate({opacity: 0}, duration * 0.4);
+        jQuery("#stripe-1").animate({ width: 0}, duration);
 
-        jQuery(".gallery-stripe:nth-of-type(2)").css({ opacity: 1 });
-        jQuery(".gallery-stripe:nth-of-type(2)").animate({ width: sw}, duration);
+        jQuery("#stripe-2").css({ opacity: 1 });
+        jQuery("#stripe-2").animate({ width: sw }, duration);
 
 
     }, 2000);
@@ -42,6 +43,15 @@ jQuery(document).ready(function() {
 
         jQuery("#third").css({ opacity: 1 });
         jQuery("#third").animate({width: w}, duration);
+
+
+        // gallery-stripe:
+        var sw = jQuery("#stripe-2").width();
+        jQuery("#stripe-2 img").animate({opacity: 0}, duration * 0.4);
+        jQuery("#stripe-2").animate({ width: 0}, duration);
+
+        jQuery("#stripe-3").css({ opacity: 1 });
+        jQuery("#stripe-3").animate({ width: sw }, duration);
 
     }, 4000);
 
