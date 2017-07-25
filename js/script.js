@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
     var root = jQuery(":root");
 
     var active = 0;
-    var page_change_duration = 500;
+    var page_change_duration = 700;
 
     /* hide all project pages except first: */
     // text containers:
@@ -43,10 +43,12 @@ jQuery(document).ready(function() {
 
 
             // gallery-stripe:
-            // stripes.eq(active)("img").animate({opacity: 0}, page_change_duration * 0.4);
+            stripes.eq(active).find("img").animate({ opacity: 0 }, page_change_duration * 0.3);
+
             stripes.eq(active).animate({ width: 0 }, page_change_duration);
             stripes.eq(active + 1).css({ opacity: 1 });
             stripes.eq(active + 1).animate({ width: stripeWidth }, page_change_duration);
+            stripes.eq(active + 1).find("img").animate({ opacity: 1 }, page_change_duration * 0.3);
 
             active++;
             root.css("--main-color", stripes.eq(active).css("background-color"));
@@ -68,10 +70,13 @@ jQuery(document).ready(function() {
 
 
             // gallery-stripe:
-            // stripes.eq(active)("img").animate({opacity: 0}, page_change_duration * 0.4);
+            stripes.eq(active).find("img").animate({ opacity: 0 }, page_change_duration * 0.3);
             stripes.eq(active).animate({ width: 0 }, page_change_duration);
+
             stripes.eq(active - 1).css({ opacity: 1 });
             stripes.eq(active - 1).animate({ width: stripeWidth }, page_change_duration);
+            stripes.eq(active - 1).find("img").animate({ opacity: 1 }, page_change_duration * 0.3);
+
 
             active--;
             root.css("--main-color", stripes.eq(active).css("background-color"));
