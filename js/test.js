@@ -6,10 +6,13 @@ jQuery(document).ready(function() {
     var duration = 600;
 
 
+
     for(var i = 0; i < boxes.length; i++) {
         boxes.eq(i).css({ opacity: 0 });
     }
     boxes.eq(active).css({ opacity: 1 });
+
+
 
     jQuery("#fwd").click(function () {
         if(active < boxes.length - 1) {

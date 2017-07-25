@@ -15,6 +15,7 @@
 <body>
 
     <div id="page-viewport">
+
         <header>
             <ul id="top-menu">
                 <li><span class="bordered-span">Обо мне</span></li>
@@ -23,22 +24,38 @@
             </ul>
             <div id="h-line"></div>
         </header>
+
         <main>
             <div class="blank-container">
                 <img class="arrow" id="left-arrow" src="images/arrow_left.svg">
                 <div class="box romb">
                     <div class="inner-romb">Qt</div>
                 </div>
-                <p class="text-container">
-                    <span style="font-weight: 800;">Парсер .xlsx таблиц</span><br><br>
-                    <span style="font-size: 20px; color: #858585">Находение товаров с учетом различия написания <br>
+
+                <div id="description-switcher">
+
+                    <p class="text-container" id="first">
+                        <span style="font-weight: 800;">Парсер .xlsx таблиц</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Находение товаров с учетом различия написания <br>
                     из прайс-листов<br>
                     Поиск товаров с наименьшей ценой</span><br>
-                    <br>
-                    <a href="http://google.com">Github</a>
-                </p>
+                        <br>
+                        <a href="http://google.com">Github</a>
+                    </p>
+
+                    <p class="text-container" id="second">
+                        <span style="font-weight: 800;">Другой проект</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Описание другого проекта <br>
+                    другое описание<br>
+                    И что-то еще</span><br>
+                        <br>
+                        <a href="http://google.com">Hitbug</a>
+                    </p>
+
+                </div>
                 <img class="arrow" id="right-arrow" src="images/arrow_right.svg">
             </div>
+
             <div id="gallery-stripe">
                 <ul id="gallery-list" class="h-menu">
                     <li><img src="images/excel-parser/main.png"></li>
@@ -46,6 +63,7 @@
                     <li><img src="images/excel-parser/refine_category.png"></li>
                 </ul>
             </div>
+
         </main>
         <footer></footer>
     </div>

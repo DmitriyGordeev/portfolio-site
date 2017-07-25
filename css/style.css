@@ -126,6 +126,7 @@ main {
     padding: 39px 0;
     box-sizing: border-box;
     transform: rotate(45deg);
+    float: left;
 }
 
 .inner-romb {
@@ -139,13 +140,23 @@ main {
     transform: rotate(-45deg);
 }
 
-.text-container {
-    vertical-align: top;
+#description-switcher {
+    /*vertical-align: top;*/
     display: inline-block;
     position: relative;
     left: 300px;
     top: 40px;
     font-size: 25px;
+    float: left;
+    height: 200px;
+}
+
+.text-container {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    float: left;
 }
 
 .arrow {
