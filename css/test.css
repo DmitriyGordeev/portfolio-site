@@ -1,0 +1,24 @@
+/* test page styles: */
+
+#target {
+    width: 700px;
+    height: 100px;
+    background: #2fc58c;
+}
+
+#first {
+    width: 700px;
+    height: 100px;
+    display: inline-block;
+    float: left;
+    background: #2fc58c;
+}
+
+#second {
+    width: 0;
+    height: 100px;
+    display: inline-block;
+    float: left;
+    background: #c53c49;
+}
+

@@ -142,11 +142,27 @@ main {
 .text-container {
     vertical-align: top;
     display: inline-block;
-    background: #eeeeee;
     position: relative;
     left: 300px;
     top: 40px;
     font-size: 25px;
+}
+
+.arrow {
+    height: 30px;
+    display: inline-block;
+}
+
+#left-arrow {
+    position: absolute;
+    left: -50px;
+    top: 100px;
+}
+
+#right-arrow {
+    position: absolute;
+    right: -50px;
+    top: 100px;
 }
 
 #gallery-stripe {
