@@ -176,10 +176,13 @@ main {
     top: 100px;
 }
 
-#gallery-stripe {
+.gallery-stripe {
     height: 210px;
+    width: 100%;
     background: #2fc58c;
     overflow: hidden;
+    display: inline-block;
+    float: left;
 }
 
 .h-menu {
@@ -198,7 +201,7 @@ main {
     color: var(--dark-blue);
 }
 
-#gallery-list img {
+.h-menu img {
     display: inline-block;
     height: 100%;
     border: 6px solid #34344a;
