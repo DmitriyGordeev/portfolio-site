@@ -2,65 +2,122 @@
 
 jQuery(document).ready(function() {
 
-    jQuery("#left-arrow").click(function() {
-        alert("Left arrow!");
-    });
+    var active = 0;
+    var page_change_duration = 500;
 
-    jQuery("#right-arrow").click(function() {
-        alert("Right arrow!");
-    });
+    /* hide all project pages except first: */
+    // text containers:
+    var containers = jQuery(".text-container");
+    if(containers.length > 1) {
+        for(var i = 1; i < containers.length; i++) {
+            containers.eq(i).css({ width: 0, opacity: 0 });
+        }
+    }
 
-    // text-description:
-    jQuery("#second").css({ width: 0, opacity: 0 });
-    jQuery("#third").css({ width: 0, opacity: 0 });
-
-
-    // gallery-stripe:
+    // gallery stripes:
     var stripes = jQuery(".gallery-stripe");
-    for(var i = 1; i < stripes.length; i++) {
-        stripes.eq(i).css({ width: 0, opacity: 0});
+    if(stripes.length > 1) {
+        for (i = 1; i < stripes.length; i++) {
+            stripes.eq(i).css({ width: 0, opacity: 0 });
+        }
     }
 
 
-    var duration = 500;
-    setTimeout(function() {
+    jQuery("#right-arrow").click(function() {
 
-        // text-description:
-        var w = jQuery("#first").width();
-        jQuery("#first").animate({width: 0, opacity: 0}, duration);
+        var containerWidth = containers.eq(active).width();
+        var stripeWidth = stripes.eq(active).width();
 
-        jQuery("#second").css({ opacity: 1 });
-        jQuery("#second").animate({width: w}, duration);
+        if(active < containers.length - 1) {
 
-
-        // gallery-stripe:
-        var sw = jQuery("#stripe-1").width();
-        jQuery("#stripe-1 img").animate({opacity: 0}, duration * 0.4);
-        jQuery("#stripe-1").animate({ width: 0}, duration);
-
-        jQuery("#stripe-2").css({ opacity: 1 });
-        jQuery("#stripe-2").animate({ width: sw }, duration);
+            // text-container:
+            containers.eq(active).animate({width: 0, opacity: 0}, page_change_duration);
+            containers.eq(active + 1).css({opacity: 1});
+            containers.eq(active + 1).animate({width: containerWidth}, page_change_duration);
 
 
-    }, 2000);
+            // gallery-stripe:
+            // stripes.eq(active)("img").animate({opacity: 0}, page_change_duration * 0.4);
+            stripes.eq(active).animate({ width: 0 }, page_change_duration);
+            stripes.eq(active + 1).css({ opacity: 1 });
+            stripes.eq(active + 1).animate({ width: stripeWidth }, page_change_duration);
 
-    setTimeout(function() {
+            active++;
+        }
 
-        var w = jQuery("#second").width();
-        jQuery("#second").animate({width: 0, opacity: 0}, duration);
-
-        jQuery("#third").css({ opacity: 1 });
-        jQuery("#third").animate({width: w}, duration);
+    });
 
 
-        // gallery-stripe:
-        var sw = jQuery("#stripe-2").width();
-        jQuery("#stripe-2 img").animate({opacity: 0}, duration * 0.4);
-        jQuery("#stripe-2").animate({ width: 0}, duration);
+    jQuery("#left-arrow").click(function() {
 
-        jQuery("#stripe-3").css({ opacity: 1 });
-        jQuery("#stripe-3").animate({ width: sw }, duration);
+        var containerWidth = containers.eq(active).width();
+        var stripeWidth = stripes.eq(active).width();
+        if(active > 0) {
 
-    }, 4000);
+            // text-container:
+            containers.eq(active).animate({ width: 0, opacity: 0 }, page_change_duration);
+            containers.eq(active - 1).css({ opacity: 1 });
+            containers.eq(active - 1).animate({ width: containerWidth }, page_change_duration);
+
+            // gallery-stripe:
+            // stripes.eq(active)("img").animate({opacity: 0}, page_change_duration * 0.4);
+            stripes.eq(active).animate({ width: 0 }, page_change_duration);
+            stripes.eq(active - 1).css({ opacity: 1 });
+            stripes.eq(active - 1).animate({ width: stripeWidth }, page_change_duration);
+
+
+            active--;
+        }
+
+    });
+
+
+
+    // // text-description:
+    // jQuery("#second").css({ width: 0, opacity: 0 });
+    // jQuery("#third").css({ width: 0, opacity: 0 });
+
+
+    //
+    // var duration = 500;
+    // setTimeout(function() {
+    //
+    //     // text-description:
+    //     var w = jQuery("#first").width();
+    //     jQuery("#first").animate({width: 0, opacity: 0}, duration);
+    //
+    //     jQuery("#second").css({ opacity: 1 });
+    //     jQuery("#second").animate({width: w}, duration);
+    //
+    //
+    //     // gallery-stripe:
+    //     var sw = jQuery("#stripe-1").width();
+    //     jQuery("#stripe-1 img").animate({opacity: 0}, duration * 0.4);
+    //     jQuery("#stripe-1").animate({ width: 0}, duration);
+    //
+    //     jQuery("#stripe-2").css({ opacity: 1 });
+    //     jQuery("#stripe-2").animate({ width: sw }, duration);
+    //
+    //
+    // }, 2000);
+    //
+    // setTimeout(function() {
+    //
+    //     var w = jQuery("#second").width();
+    //     jQuery("#second").animate({width: 0, opacity: 0}, duration);
+    //
+    //     jQuery("#third").css({ opacity: 1 });
+    //     jQuery("#third").animate({width: w}, duration);
+    //
+    //
+    //     // gallery-stripe:
+    //     var sw = jQuery("#stripe-2").width();
+    //     jQuery("#stripe-2 img").animate({opacity: 0}, duration * 0.4);
+    //     jQuery("#stripe-2").animate({ width: 0}, duration);
+    //
+    //     jQuery("#stripe-3").css({ opacity: 1 });
+    //     jQuery("#stripe-3").animate({ width: sw }, duration);
+    //
+    // }, 4000);
 
 });
