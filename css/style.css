@@ -146,18 +146,30 @@ main {
 .arrow {
     height: 30px;
     display: inline-block;
+    padding: 10px 17px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+}
+
+.arrow:hover {
+    transition-duration: 0.4s;
+    background: var(--main-color);
+}
+
+.arrow:active {
+    background: lighten(var(--main-color), 20%);
 }
 
 #left-arrow {
     position: absolute;
     left: -50px;
-    top: 100px;
+    top: 70px;
 }
 
 #right-arrow {
     position: absolute;
     right: -50px;
-    top: 100px;
+    top: 70px;
 }
 
 .gallery-stripe {
