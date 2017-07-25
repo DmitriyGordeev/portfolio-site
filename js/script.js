@@ -35,8 +35,10 @@ jQuery(document).ready(function() {
         if(active < containers.length - 1) {
 
             // text-container:
-            containers.eq(active).animate({width: 0, opacity: 0}, page_change_duration);
-            containers.eq(active + 1).css({opacity: 1});
+            containers.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            containers.eq(active).animate({ width: 0 }, page_change_duration);
+
+            containers.eq(active + 1).css({ opacity: 1 });
             containers.eq(active + 1).animate({width: containerWidth}, page_change_duration);
 
 
@@ -58,9 +60,12 @@ jQuery(document).ready(function() {
         if(active > 0) {
 
             // text-container:
-            containers.eq(active).animate({ width: 0, opacity: 0 }, page_change_duration);
-            containers.eq(active - 1).css({ opacity: 1 });
+            containers.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            containers.eq(active).animate({ width: 0 }, page_change_duration);
+
             containers.eq(active - 1).animate({ width: containerWidth }, page_change_duration);
+            containers.eq(active - 1).animate({ opacity: 1 }, page_change_duration);
+
 
             // gallery-stripe:
             // stripes.eq(active)("img").animate({opacity: 0}, page_change_duration * 0.4);
