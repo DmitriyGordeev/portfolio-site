@@ -69,8 +69,8 @@ header {
 /* coloring top menu buttons: */
 #top-menu li:nth-of-type(1) span:hover {
     transition-duration: 0.4s;
-    color: var(--light-red);
-    border: 3px solid var(--light-red);
+    color: var(--light-green);
+    border: 3px solid var(--light-green);
     cursor: pointer;
 }
 
@@ -83,8 +83,8 @@ header {
 
 #top-menu li:nth-of-type(3) span:hover {
     transition-duration: 0.4s;
-    color: var(--light-blue);
-    border: 3px solid var(--light-blue);
+    color: var(--light-green);
+    border: 3px solid var(--light-green);
     cursor: pointer;
 }
 /* ------------------------------------------- */

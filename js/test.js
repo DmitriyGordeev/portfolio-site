@@ -66,16 +66,23 @@ function color_switch(element, secondColor, duration, left) {
 
 jQuery(document).ready(function() {
 
-    jQuery("#switcher").click(function() {
-        var secondColor = "#aa343e";
-        var duration = 1000;
-        var is_switched = false;
+    var boxes = jQuery(".box");
+    var active = 0;
+    var duration = 600;
 
-        if(is_switched) {
-            color_switch(jQuery("#target"), secondColor, duration, false);
+    jQuery("#fwd").click(function () {
+        if(active < boxes.length - 1) {
+            boxes.eq(active).animate({width: 0}, duration);
+            boxes.eq(active + 1).animate({width: 150}, duration);
+            active++;
         }
-        else {
-            color_switch(jQuery("#target"), secondColor, duration, true);
+    });
+
+    jQuery("#back").click(function () {
+        if(active > 0) {
+            boxes.eq(active).animate({width: 0}, duration);
+            boxes.eq(active - 1).animate({width: 150}, duration);
+            active--;
         }
     });
 
