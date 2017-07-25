@@ -2,6 +2,14 @@
 
 jQuery(document).ready(function() {
 
+    jQuery("#left-arrow").click(function() {
+        alert("Left arrow!");
+    });
+
+    jQuery("#right-arrow").click(function() {
+        alert("Right arrow!");
+    });
+
     // text-description:
     jQuery("#second").css({ width: 0, opacity: 0 });
     jQuery("#third").css({ width: 0, opacity: 0 });
