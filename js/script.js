@@ -2,6 +2,8 @@
 
 jQuery(document).ready(function() {
 
+    var root = jQuery(":root");
+
     var active = 0;
     var page_change_duration = 500;
 
@@ -22,6 +24,8 @@ jQuery(document).ready(function() {
         }
     }
 
+    // assign initial color:
+    root.css("--main-color", stripes.eq(active).css("background-color"));
 
     jQuery("#right-arrow").click(function() {
 
@@ -43,9 +47,9 @@ jQuery(document).ready(function() {
             stripes.eq(active + 1).animate({ width: stripeWidth }, page_change_duration);
 
             active++;
+            root.css("--main-color", stripes.eq(active).css("background-color"));
         }
     });
-
 
     jQuery("#left-arrow").click(function() {
 
@@ -65,6 +69,7 @@ jQuery(document).ready(function() {
             stripes.eq(active - 1).animate({ width: stripeWidth }, page_change_duration);
 
             active--;
+            root.css("--main-color", stripes.eq(active).css("background-color"));
         }
 
     });

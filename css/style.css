@@ -5,6 +5,7 @@
     --light-green: #31d195;
     --light-blue: #1a32b4;
     --light-yellow: #d2cf6e;
+    --main-color: #eeeeee;
 }
 
 * {
@@ -62,32 +63,15 @@ header {
     padding: 9px 0 7px;
     box-sizing: border-box;
     border-radius: 3px;
-
 }
 
-/* ------------------------------------------- */
 /* coloring top menu buttons: */
-#top-menu li:nth-of-type(1) span:hover {
+#top-menu span:hover {
     transition-duration: 0.4s;
-    color: var(--light-green);
-    border: 3px solid var(--light-green);
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
     cursor: pointer;
 }
-
-#top-menu li:nth-of-type(2) span:hover {
-    transition-duration: 0.4s;
-    color: var(--light-green);
-    border: 3px solid var(--light-green);
-    cursor: pointer;
-}
-
-#top-menu li:nth-of-type(3) span:hover {
-    transition-duration: 0.4s;
-    color: var(--light-green);
-    border: 3px solid var(--light-green);
-    cursor: pointer;
-}
-/* ------------------------------------------- */
 
 #h-line {
     width: 80%;
