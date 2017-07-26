@@ -222,17 +222,35 @@ a:hover {
 
 /* --------------------------------------------------------------- */
 /* dialog form layout: */
-#dialog {
-    width: 400px;
-    height: 300px;
+#feedback-form-container {
+    width: 500px;
+    height: 400px;
     position: absolute;
     background: var(--dark-blue);
     margin: 0 auto;
-    padding: 10px;
+    padding: 12px;
+    box-sizing: border-box;
 
-    top: calc(50% - 180px);
-    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
     /*visibility: hidden;*/
+}
+
+#dialog {
+    height: 100%;
+    border: 5px solid var(--light-green);
+    /*background: #1a32b4;*/
+    box-sizing: border-box;
+}
+
+#form-heading {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    font-size: 21px;
+    margin-top: 20px;
+    padding: 7px 0 20px;
+
 }
 
 #dialog label {
@@ -242,13 +260,13 @@ a:hover {
     height: 25px;
     line-height: 25px;
     text-align: right;
-    padding-right: 5px;
     box-sizing: border-box;
     display: inline-block;
 }
 
 #dialog input {
-    width: 75%;
+    width: 72%;
+    margin-right: 20px;
     height: 25px;
     float: right;
     background: transparent;
