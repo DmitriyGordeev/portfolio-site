@@ -1,6 +1,5 @@
 /* javascript code: */
 
-
 jQuery(document).ready(function() {
 
     var root = jQuery(":root");
@@ -83,14 +82,24 @@ jQuery(document).ready(function() {
     });
 
     /* feedback handle: */
-    jQuery("#write-feedback").click(function() {
+    jQuery("#feedback-button").click(function() {
         jQuery("#feedback-form-container").css({ visibility: "visible" });
         jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
+    });
+
+    jQuery("#contacts-button").click(function() {
+        jQuery("#contacts-container").css({ visibility: "visible" });
+        jQuery("#contacts-container").animate({ opacity: 1 }, 200);
     });
 
     jQuery("#feedback-close-button").click(function() {
         jQuery("#feedback-form-container").animate({ opacity: 0 }, 200);
         setTimeout(function() { jQuery("#feedback-form-container").css({ visibility: "hidden" }); }, 200);
+    });
+
+    jQuery("#contacts-close-button").click(function() {
+        jQuery("#contacts-container").animate({ opacity: 0 }, 200);
+        setTimeout(function() { jQuery("#contacts-container").css({ visibility: "hidden" }); }, 200);
     });
 
 

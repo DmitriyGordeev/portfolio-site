@@ -323,22 +323,24 @@ a:hover {
     transition-duration: 0.4s;
 }
 
-#feedback-close-button {
+#feedback-close-button, #contacts-close-button {
     width: 25px;
     height: 25px;
     position: absolute;
     top: 25px;
     right: 25px;
     background: var(--main-color);
-    /*border-radius: 30px;*/
     padding: 3px;
-
     transition-duration: 0.4s;
 }
 
-#feedback-close-button:hover {
+#feedback-close-button:hover, #contacts-close-button:hover {
     background: #f14958;
     transition-duration: 0.4s;
+}
+
+#contacts-close-button {
+    padding: 0;
 }
 
 
@@ -349,10 +351,11 @@ a:hover {
     width: 500px;
     height: 220px;
     background: var(--dark-blue);
-    top: calc(50% - 150px);
-    left: calc(50% - 225px);
+    top: calc(50% - 180px);
+    left: calc(50% - 250px);
     padding: 8px;
     box-sizing: border-box;
+    visibility: hidden;
 }
 
 #contacts-inner-container {
@@ -375,12 +378,4 @@ a:hover {
 .help-label {
     color: #eeeeee;
     border-bottom: 2px solid var(--main-color);
-}
-
-#contacts-inner-container img {
-    width: 50px;
-    margin: 10px;
-    display: inline-block;
-    float: left;
-    background: var(--main-color);
 }
