@@ -261,21 +261,20 @@ a:hover {
 
 #dialog label {
     color: white;
-    font-weight: 500;
-    width: 105px;
+    /*width: 30%;*/
     height: 25px;
     line-height: 25px;
-    text-align: right;
-    box-sizing: border-box;
     display: inline-block;
-    /*background: red;*/
-    margin-bottom: 10px;
+    /*background: blue;*/
+    text-align: left;
+    box-sizing: border-box;
+    /*padding-right: 5px;*/
 }
 
 #dialog input {
-    width: 72%;
-    margin-right: 20px;
+    width: 80%;
     height: 25px;
+    vertical-align: top;
     float: right;
     background: transparent;
     border: none;
@@ -289,15 +288,18 @@ a:hover {
 }
 
 #dialog textarea {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     background: transparent;
     border: 2px solid var(--main-color);
     color: white;
+    margin-top: 7px;
     resize: none;
     display: block;
     font-size: 16px;
     padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #dialog textarea:focus {
