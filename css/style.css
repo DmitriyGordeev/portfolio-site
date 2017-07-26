@@ -220,4 +220,46 @@ a:hover {
 }
 
 
+/* --------------------------------------------------------------- */
+/* dialog form layout: */
+#dialog {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    background: var(--dark-blue);
+    margin: 0 auto;
+    padding: 10px;
+
+    top: calc(50% - 180px);
+    left: calc(50% - 200px);
+    /*visibility: hidden;*/
+}
+
+#dialog label {
+    color: white;
+    font-weight: 500;
+    width: 20%;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+    padding-right: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#dialog input {
+    width: 75%;
+    height: 25px;
+    float: right;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--main-color);
+    color: white;
+    font-size: 16px;
+}
+
+#dialog input:focus {
+    outline: none;
+}
+
 
