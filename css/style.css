@@ -306,9 +306,9 @@ a:hover {
 }
 
 #feedback-button {
-    background: var(--main-color);
     border: none;
-    color: white;
+    color: var(--main-color);
+    background: none;
     padding: 7px 9px;
     transition-duration: 0.4s;
     display: block;
@@ -317,7 +317,7 @@ a:hover {
 }
 
 #feedback-button:hover {
-    background: var(--dark-blue);
-    color: var(--main-color);
+    background: var(--main-color);
+    color: white;
     transition-duration: 0.4s;
 }
