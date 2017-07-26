@@ -363,7 +363,7 @@ a:hover {
     height: 100%;
     border: 5px solid var(--main-color);
     box-sizing: border-box;
-    padding-top: 7px;
+    padding-top: 12px;
 }
 
 #contacts-inner-container p {
