@@ -1,5 +1,6 @@
 /* javascript code: */
 
+
 jQuery(document).ready(function() {
 
     var root = jQuery(":root");
@@ -7,7 +8,7 @@ jQuery(document).ready(function() {
     var active = 0;
     var page_change_duration = 700;
 
-    /* hide all project pages except first: */
+
     // text containers:
     var containers = jQuery(".text-container");
     if(containers.length > 1) {
@@ -15,6 +16,7 @@ jQuery(document).ready(function() {
             containers.eq(i).css({ width: 0, opacity: 0 });
         }
     }
+
 
     // gallery stripes:
     var stripes = jQuery(".gallery-stripe");
@@ -24,14 +26,14 @@ jQuery(document).ready(function() {
         }
     }
 
+
     // assign initial color:
     root.css("--main-color", stripes.eq(active).css("background-color"));
 
-    jQuery("#right-arrow").click(function() {
 
+    jQuery("#right-arrow").click(function() {
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
-
         if(active < containers.length - 1) {
 
             // text-container:
@@ -56,7 +58,6 @@ jQuery(document).ready(function() {
     });
 
     jQuery("#left-arrow").click(function() {
-
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
         if(active > 0) {
@@ -81,7 +82,6 @@ jQuery(document).ready(function() {
             active--;
             root.css("--main-color", stripes.eq(active).css("background-color"));
         }
-
     });
 
 });
