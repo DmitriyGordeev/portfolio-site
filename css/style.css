@@ -347,7 +347,7 @@ a:hover {
 #contacts-container {
     position: absolute;
     width: 500px;
-    height: 230px;
+    height: 220px;
     background: var(--dark-blue);
     top: calc(50% - 150px);
     left: calc(50% - 225px);
@@ -366,8 +366,8 @@ a:hover {
 #contacts-inner-container p {
     color: white;
     width: 340px;
-    padding: 15px 10px;
-    margin: 10px 0;
+    padding: 8px 10px;
+    margin: 10px 0 10px 25px;
     display: inline-block;
     float: left;
 }
