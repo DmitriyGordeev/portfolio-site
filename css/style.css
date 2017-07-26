@@ -321,3 +321,11 @@ a:hover {
     color: white;
     transition-duration: 0.4s;
 }
+
+#close-button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
