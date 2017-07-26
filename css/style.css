@@ -224,7 +224,7 @@ a:hover {
 /* dialog form layout: */
 #feedback-form-container {
     width: 500px;
-    height: 400px;
+    height: 425px;
     position: absolute;
     background: var(--dark-blue);
     margin: 0 auto;
@@ -238,8 +238,7 @@ a:hover {
 
 #dialog {
     height: 100%;
-    border: 5px solid var(--light-green);
-    /*background: #1a32b4;*/
+    border: 5px solid var(--main-color);
     box-sizing: border-box;
 }
 
@@ -306,5 +305,19 @@ a:hover {
     outline: var(--main-color);
 }
 
+#feedback-button {
+    background: var(--main-color);
+    border: none;
+    color: white;
+    padding: 7px 9px;
+    transition-duration: 0.4s;
+    display: block;
+    margin: 15px auto 0;
+    font-size: 15px;
+}
 
-
+#feedback-button:hover {
+    background: var(--dark-blue);
+    color: var(--main-color);
+    transition-duration: 0.4s;
+}
