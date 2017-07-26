@@ -84,4 +84,10 @@ jQuery(document).ready(function() {
         }
     });
 
+    /* feedback handle: */
+    jQuery("#write-feedback").click(function() {
+        jQuery("#feedback-form-container").css({ visibility: "visible" });
+        jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
+    });
+
 });
