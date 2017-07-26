@@ -26,10 +26,8 @@ jQuery(document).ready(function() {
         }
     }
 
-
     // assign initial color:
     root.css("--main-color", stripes.eq(active).css("background-color"));
-
 
     jQuery("#right-arrow").click(function() {
         var containerWidth = containers.eq(active).width();
@@ -89,5 +87,12 @@ jQuery(document).ready(function() {
         jQuery("#feedback-form-container").css({ visibility: "visible" });
         jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
     });
+
+    jQuery("#feedback-close-button").click(function() {
+        jQuery("#feedback-form-container").animate({ opacity: 0 }, 200);
+        setTimeout(function() { jQuery("#feedback-form-container").css({ visibility: "hidden" }); }, 200);
+    });
+
+
 
 });

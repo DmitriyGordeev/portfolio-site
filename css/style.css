@@ -306,7 +306,7 @@ a:hover {
     outline: var(--main-color);
 }
 
-#feedback-button {
+#feedback-submit-button {
     border: none;
     color: var(--main-color);
     background: none;
@@ -317,13 +317,13 @@ a:hover {
     font-size: 15px;
 }
 
-#feedback-button:hover {
+#feedback-submit-button:hover {
     background: var(--main-color);
     color: white;
     transition-duration: 0.4s;
 }
 
-#close-button {
+#feedback-close-button {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -336,7 +336,7 @@ a:hover {
     transition-duration: 0.4s;
 }
 
-#close-button:hover {
+#feedback-close-button:hover {
     background: #f14958;
     transition-duration: 0.4s;
 }
