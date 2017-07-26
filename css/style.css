@@ -256,12 +256,14 @@ a:hover {
 #dialog label {
     color: white;
     font-weight: 500;
-    width: 20%;
+    min-width: 20%;
     height: 25px;
     line-height: 25px;
     text-align: right;
     box-sizing: border-box;
     display: inline-block;
+    background: red;
+    margin-bottom: 10px;
 }
 
 #dialog input {
@@ -279,5 +281,22 @@ a:hover {
 #dialog input:focus {
     outline: none;
 }
+
+#dialog textarea {
+    width: 80%;
+    margin: 0 auto;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: white;
+    resize: none;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#dialog textarea:focus {
+    outline: var(--main-color);
+}
+
 
 
