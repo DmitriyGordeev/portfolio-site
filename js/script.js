@@ -101,7 +101,4 @@ jQuery(document).ready(function() {
         jQuery("#contacts-container").animate({ opacity: 0 }, 200);
         setTimeout(function() { jQuery("#contacts-container").css({ visibility: "hidden" }); }, 200);
     });
-
-
-
 });
