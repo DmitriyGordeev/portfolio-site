@@ -1,9 +1,19 @@
 /* Styles code: */
 
+:root {
+    --dark-blue: #34344a;
+    --light-red: #ee293f;
+    --light-green: #31d195;
+    --light-blue: #1a32b4;
+    --light-yellow: #d2cf6e;
+    --main-color: #eeeeee;
+}
+
 * {
     color: #274249;
     padding: 0;
     margin: 0;
+    font-family: 'Comfortaa', cursive;
 }
 
 html, body {
@@ -11,23 +21,323 @@ html, body {
     height: 100%;
 }
 
+body {
+    padding: 10px 20px 20px 10px;
+    box-sizing: border-box;
+}
+
+#page-viewport {
+    border: 4px solid var(--dark-blue);
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+}
+
 header {
-    height: 5%;
-    max-height: 150px;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    /*background: red;*/
+}
+
+#top-menu {
+    list-style: none;
+    width: 500px;
+    margin: 10px auto;
+}
+
+#top-menu li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33%;
+    color: var(--dark-blue);
+    font-weight: 800;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.bordered-span {
+    border: 3px solid var(--dark-blue);
+    display: block;
+    width: 80%;
+    padding: 9px 0 7px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+/* coloring top menu buttons: */
+#top-menu span:hover {
+    transition-duration: 0.4s;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+}
+
+#h-line {
+    width: 80%;
+    height: 4px;
+    margin: 80px auto 0;
+    background: var(--dark-blue);
+    border-radius: 5px;
 }
 
 main {
-    height: 90%;
+    background: #eeeeee;
     width: 100%;
+    height: calc(100% - 100px);
+    overflow: hidden;
 }
 
-footer {
-    height: 5%;
-    max-height: 150px;
+.blank-container {
+    width: 80%;
+    height: 270px;
+    position: relative;
+    margin: 50px auto 0;
+    /*background: red;*/
 }
 
-#background-box {
-    width: 100%;
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 60px;
+    left: 170px;
+    background: #2fc58c;
+    display: inline-block;
+}
+
+.romb {
+    padding: 39px 0;
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    float: left;
+}
+
+.inner-romb {
+    position: relative;
+    color: white;
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    margin: auto auto;
+    transform: rotate(-45deg);
+}
+
+#description-switcher {
+    /*vertical-align: top;*/
+    display: inline-block;
+    position: relative;
+    left: 300px;
+    top: 40px;
+    font-size: 25px;
+    float: left;
+    height: 200px;
+}
+
+.text-container {
     height: 100%;
-    background: #aaaaaa;
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    float: left;
+}
+
+.arrow {
+    height: 30px;
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+}
+
+.arrow:hover {
+    transition-duration: 0.4s;
+    background: var(--main-color);
+}
+
+.arrow:active {
+    background: lighten(var(--main-color), 20%);
+}
+
+#left-arrow {
+    position: absolute;
+    left: -50px;
+    top: 70px;
+}
+
+#right-arrow {
+    position: absolute;
+    right: -50px;
+    top: 70px;
+}
+
+.gallery-stripe {
+    height: 210px;
+    width: 100%;
+    background: #2fc58c;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+}
+
+.h-menu {
+    list-style: none;
+    min-width: 500px;
+    max-width: 80%;
+    margin: 15px auto;
+}
+
+.h-menu li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 180px;
+    color: var(--dark-blue);
+}
+
+.h-menu img {
+    display: inline-block;
+    height: 100%;
+    border: 6px solid #34344a;
+    box-sizing: border-box;
+    /*border-radius: 3px;*/
+}
+
+/* testing reference: */
+a {
+    font-size: 21px;
+    text-decoration: none;
+    padding: 5px 0px;
+    transition-duration: 0.4s;
+    color: #2fc58c;
+}
+
+a:hover {
+    transition-duration: 0.4s;
+    text-decoration: underline;
+}
+
+
+/* --------------------------------------------------------------- */
+/* dialog form layout: */
+#feedback-form-container {
+    width: 500px;
+    height: 425px;
+    position: absolute;
+    background: var(--dark-blue);
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+#dialog {
+    height: 100%;
+    border: 5px solid var(--main-color);
+    box-sizing: border-box;
+}
+
+#form-heading {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    font-size: 21px;
+    margin-top: 20px;
+    padding: 7px 0 20px;
+
+}
+
+#form-inner {
+    width: 80%;
+    height: 270px;
+    margin: 0 auto;
+}
+
+#dialog label {
+    color: white;
+    /*width: 30%;*/
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    /*background: blue;*/
+    text-align: left;
+    box-sizing: border-box;
+    /*padding-right: 5px;*/
+}
+
+#dialog input {
+    width: 80%;
+    height: 25px;
+    vertical-align: top;
+    float: right;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--main-color);
+    color: white;
+    font-size: 16px;
+}
+
+#dialog input:focus {
+    outline: none;
+}
+
+#dialog textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: white;
+    margin-top: 7px;
+    resize: none;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#dialog textarea:focus {
+    outline: var(--main-color);
+}
+
+#feedback-submit-button {
+    border: none;
+    color: var(--main-color);
+    background: none;
+    padding: 7px 9px;
+    transition-duration: 0.4s;
+    display: block;
+    margin: 15px auto 0;
+    font-size: 15px;
+}
+
+#feedback-submit-button:hover {
+    background: var(--main-color);
+    color: white;
+    transition-duration: 0.4s;
+}
+
+#feedback-close-button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: var(--main-color);
+    /*border-radius: 30px;*/
+    padding: 3px;
+
+    transition-duration: 0.4s;
+}
+
+#feedback-close-button:hover {
+    background: #f14958;
+    transition-duration: 0.4s;
 }

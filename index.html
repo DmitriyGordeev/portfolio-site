@@ -4,21 +4,119 @@
     <meta charset="UTF-8">
     <title>Portfolio - MainPage</title>
 
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
 
-    <header>
-    </header>
+    <div id="page-viewport">
 
-    <main>
-        <div id="background-box"></div>
-    </main>
+        <header>
+            <ul id="top-menu">
+                <li><span class="bordered-span">Обо мне</span></li>
+                <li><span class="bordered-span" id="write-feedback">Написать</span></li>
+                <li><span class="bordered-span">Контакты</span></li>
+            </ul>
+            <div id="h-line"></div>
+        </header>
 
-    <footer>
-    </footer>
+        <main>
+            <div class="blank-container">
+                <img class="arrow" id="left-arrow" src="images/arrow_left.svg">
+                <div class="box romb">
+                    <div class="inner-romb">Qt</div>
+                </div>
+
+                <div id="description-switcher">
+
+                    <!-- first project -->
+                    <p class="text-container" id="first">
+                        <span style="font-weight: 800;">Парсер .xlsx таблиц</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Находение товаров с учетом различия написания <br>
+                    из прайс-листов<br>
+                    Поиск товаров с наименьшей ценой</span><br>
+                        <br>
+                        <a href="http://google.com">Github</a>
+                    </p>
+
+                    <!-- second project -->
+                    <p class="text-container" id="second">
+                        <span style="font-weight: 800;">Другой проект</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Описание другого проекта <br>
+                    другое описание<br>
+                    И что-то еще</span><br>
+                        <br>
+                        <a href="http://google.com">Hitbug</a>
+                    </p>
+
+                    <!-- third project -->
+                    <p class="text-container" id="third">
+                        <span style="font-weight: 800;">Третий проект</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Описание третьего проекта <br>
+                    другое описание<br>
+                    И что-то еще</span><br>
+                        <br>
+                        <a href="http://google.com">Gigtag</a>
+                    </p>
+
+                </div>
+                <img class="arrow" id="right-arrow" src="images/arrow_right.svg">
+            </div>
+
+            <div class="gallery-stripe">
+                <ul class="h-menu">
+                    <li><img src="images/excel-parser/main.png"></li>
+                    <li><img src="images/excel-parser/select_file.png"></li>
+                    <li><img src="images/excel-parser/refine_category.png"></li>
+                </ul>
+            </div>
+
+            <div class="gallery-stripe" style="background: #007fff">
+                <ul class="h-menu">
+                    <li><img src="images/excel-parser/main.png"></li>
+                    <li><img src="images/excel-parser/select_file.png"></li>
+                    <li><img src="images/excel-parser/refine_category.png"></li>
+                </ul>
+            </div>
+
+            <div class="gallery-stripe"  style="background: #ee5361">
+                <ul class="h-menu">
+                    <li><img src="images/excel-parser/main.png"></li>
+                    <li><img src="images/excel-parser/select_file.png"></li>
+                    <li><img src="images/excel-parser/refine_category.png"></li>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer></footer>
+
+        <!-- Feedback form: -->
+        <div id="feedback-form-container">
+            <form id="dialog" name="feedback-message">
+                <p id="form-heading">Сообщение</p>
+                <div id="form-inner">
+
+                    <label>Email:</label>
+                    <input type="email" placeholder="Ваш email" name="email">
+
+                    <br><br>
+                    <label>Сообщение:</label>
+                    <textarea placeholder="Ваше сообщение" rows="9"></textarea>
+                    <button id="feedback-submit-button">Отправить</button>
+                </div>
+
+                <img id="feedback-close-button" src="images/cross-close.svg">
+            </form>
+        </div>
+
+
+    </div>
 
 </body>
 </html>
