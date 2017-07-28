@@ -104,23 +104,23 @@ jQuery(document).ready(function() {
     });
 
 
-    // ----------------------------------------------------------
-    // testing:
-    var getGif = function() {
-        var gif = [];
-        jQuery('.gif-anim').each(function() {
-            var data = $(this).data('alt');
-            gif.push(data);
-        });
-        return gif;
-    }
-
-    var gif = getGif();
-    var image = [];
-    jQuery.each(gif, function(index) {
-        image[index] = new Image();
-        image[index].src = gif[index];
-    });
+    // // ----------------------------------------------------------
+    // // testing:
+    // var getGif = function() {
+    //     var gif = [];
+    //     jQuery('.gif-anim').each(function() {
+    //         var data = $(this).data('alt');
+    //         gif.push(data);
+    //     });
+    //     return gif;
+    // }
+    //
+    // var gif = getGif();
+    // var image = [];
+    // jQuery.each(gif, function(index) {
+    //     image[index] = new Image();
+    //     image[index].src = gif[index];
+    // });
 
     jQuery("figure.gif-animation").on("click", function() {
 
