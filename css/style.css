@@ -97,14 +97,20 @@ main {
     /*background: red;*/
 }
 
-.box {
+#logo-switcher {
     width: 100px;
     height: 100px;
     position: relative;
     top: 60px;
     left: 170px;
-    background: #2fc58c;
     display: inline-block;
+    float: left;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    background: var(--main-color);
 }
 
 .romb {

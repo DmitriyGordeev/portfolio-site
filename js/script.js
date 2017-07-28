@@ -29,7 +29,11 @@ jQuery(document).ready(function() {
     // assign initial color:
     root.css("--main-color", stripes.eq(active).css("background-color"));
 
+
+    // ---------------------------------------------------------------
+    // change page events:
     jQuery("#right-arrow").click(function() {
+
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
         if(active < containers.length - 1) {
@@ -82,7 +86,9 @@ jQuery(document).ready(function() {
         }
     });
 
-    /* feedback handle: */
+
+    // ---------------------------------------------------------------
+    // menu buttons:
     jQuery("#feedback-button").click(function() {
         jQuery("#feedback-form-container").css({ visibility: "visible" });
         jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
