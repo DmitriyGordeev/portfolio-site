@@ -135,7 +135,7 @@ jQuery(document).ready(function() {
             image.attr("src", image.data("alt")).attr("data-alt", imageSrc);
         }
         else {
-            image.attr("src", image.data("alt")).attr("data-alt", imageSrc);
+            image.attr("src", imageDataAlt).attr("data-alt", image.data("alt"));
         }
     });
 
