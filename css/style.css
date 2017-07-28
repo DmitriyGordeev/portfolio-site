@@ -380,3 +380,9 @@ a:hover {
     color: #eeeeee;
     border-bottom: 2px solid var(--main-color);
 }
+
+
+/* testing figure animate: */
+figure.gif-animation {
+    height: 100%;
+}

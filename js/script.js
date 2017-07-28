@@ -25,6 +25,7 @@ jQuery(document).ready(function() {
         }
     }
 
+
     // assign initial color:
     root.css("--main-color", stripes.eq(active).css("background-color"));
 
@@ -101,4 +102,41 @@ jQuery(document).ready(function() {
         jQuery("#contacts-container").animate({ opacity: 0 }, 200);
         setTimeout(function() { jQuery("#contacts-container").css({ visibility: "hidden" }); }, 200);
     });
+
+
+    // ----------------------------------------------------------
+    // testing:
+    var getGif = function() {
+        var gif = [];
+        jQuery('.gif-anim').each(function() {
+            var data = $(this).data('alt');
+            gif.push(data);
+        });
+        return gif;
+    }
+
+    var gif = getGif();
+    var image = [];
+    jQuery.each(gif, function(index) {
+        image[index] = new Image();
+        image[index].src = gif[index];
+    });
+
+    jQuery("figure.gif-animation").on("click", function() {
+
+        var index = jQuery(this).index();
+        var image = jQuery(this).children("img");
+        var imageSrc = image.attr("src");
+        var imageDataAlt = image.attr("data-alt");
+        var imageExt = imageDataAlt.split(".");
+
+        // swap 'src' and 'data-alt':
+        if(imageExt[1] == "gif") {
+            image.attr("src", image.data("alt")).attr("data-alt", imageSrc);
+        }
+        else {
+            image.attr("src", image.data("alt")).attr("data-alt", imageSrc);
+        }
+    });
+
 });
