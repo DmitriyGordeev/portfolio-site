@@ -8,6 +8,15 @@ jQuery(document).ready(function() {
     var page_change_duration = 700;
 
 
+    // inner-rombs:
+    var rombs = jQuery(".inner-romb");
+    if(rombs.length > 1) {
+        for(var i = 1; i < rombs.length; i++) {
+            rombs.eq(i).css({ width: 0, opacity: 0 });
+        }
+    }
+
+
     // text containers:
     var containers = jQuery(".text-container");
     if(containers.length > 1) {
@@ -110,24 +119,8 @@ jQuery(document).ready(function() {
     });
 
 
-    // // ----------------------------------------------------------
-    // // testing:
-    // var getGif = function() {
-    //     var gif = [];
-    //     jQuery('.gif-anim').each(function() {
-    //         var data = $(this).data('alt');
-    //         gif.push(data);
-    //     });
-    //     return gif;
-    // }
-    //
-    // var gif = getGif();
-    // var image = [];
-    // jQuery.each(gif, function(index) {
-    //     image[index] = new Image();
-    //     image[index].src = gif[index];
-    // });
 
+    // Gif animation on click:
     jQuery("figure.gif-animation").on("click", function() {
 
         var index = jQuery(this).index();
