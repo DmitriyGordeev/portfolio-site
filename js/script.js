@@ -45,23 +45,31 @@ jQuery(document).ready(function() {
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
+        var rombWidth = rombs.eq(active).width();
+
         if(active < containers.length - 1) {
+
+            // romb:
+            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            rombs.eq(active).animate({ width: 0 }, page_change_duration);
+            rombs.eq(active + 1).css({ opacity: 1 });
+            rombs.eq(active + 1).animate({ width: rombWidth }, page_change_duration);
+
 
             // text-container:
             containers.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
             containers.eq(active).animate({ width: 0 }, page_change_duration);
-
             containers.eq(active + 1).css({ opacity: 1 });
             containers.eq(active + 1).animate({width: containerWidth}, page_change_duration);
 
 
             // gallery-stripe:
             stripes.eq(active).find("img").animate({ opacity: 0 }, page_change_duration * 0.3);
-
             stripes.eq(active).animate({ width: 0 }, page_change_duration);
             stripes.eq(active + 1).css({ opacity: 1 });
             stripes.eq(active + 1).animate({ width: stripeWidth }, page_change_duration);
             stripes.eq(active + 1).find("img").animate({ opacity: 1 }, page_change_duration * 0.3);
+
 
             active++;
             root.css("--main-color", stripes.eq(active).css("background-color"));
@@ -69,14 +77,23 @@ jQuery(document).ready(function() {
     });
 
     jQuery("#left-arrow").click(function() {
+
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
+        var rombWidth = rombs.eq(active).width();
+
         if(active > 0) {
+
+            // romb:
+            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            rombs.eq(active).animate({ width: 0 }, page_change_duration);
+            rombs.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
+            rombs.eq(active - 1).css({ opacity: 1 }, page_change_duration);
+
 
             // text-container:
             containers.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
             containers.eq(active).animate({ width: 0 }, page_change_duration);
-
             containers.eq(active - 1).animate({ width: containerWidth }, page_change_duration);
             containers.eq(active - 1).animate({ opacity: 1 }, page_change_duration);
 
@@ -84,7 +101,6 @@ jQuery(document).ready(function() {
             // gallery-stripe:
             stripes.eq(active).find("img").animate({ opacity: 0 }, page_change_duration * 0.3);
             stripes.eq(active).animate({ width: 0 }, page_change_duration);
-
             stripes.eq(active - 1).css({ opacity: 1 });
             stripes.eq(active - 1).animate({ width: stripeWidth }, page_change_duration);
             stripes.eq(active - 1).find("img").animate({ opacity: 1 }, page_change_duration * 0.3);
