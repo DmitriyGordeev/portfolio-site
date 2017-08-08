@@ -135,7 +135,6 @@ jQuery(document).ready(function() {
     });
 
 
-
     // Gif animation on click:
     jQuery("figure.gif-animation").on("click", function() {
 
@@ -153,5 +152,18 @@ jQuery(document).ready(function() {
             image.attr("src", imageDataAlt).attr("data-alt", image.data("alt"));
         }
     });
+
+
+    // Image zoom on click:
+    jQuery("img.zoom").click(function() {
+        jQuery(this).dialog({
+            modal: true,
+            width: 1500 * 0.6,
+            height: 800 * 0.6,
+            close: function() { $(this).dialog("destroy"); }
+        });
+    });
+
+
 
 });
