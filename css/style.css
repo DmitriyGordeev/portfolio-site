@@ -202,6 +202,7 @@ main {
     width: 33%;
     height: 180px;
     color: var(--dark-blue);
+    background: #1a32b4;
 }
 
 .h-menu img {
@@ -403,4 +404,11 @@ a:hover {
 /* testing figure animate: */
 figure.gif-animation {
     height: 100%;
+}
+
+.bottom-text {
+    font-size: 30px;
+    margin-top: 70px;
+    font-weight: 900;
+    display: inline-block;
 }
