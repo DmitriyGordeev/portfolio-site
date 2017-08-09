@@ -61,9 +61,6 @@ jQuery(document).ready(function() {
             $({deg: 45}).animate({deg: 405}, {
                 duration: 1000,
                 step: function(now) {
-                    // in the step-callback (that is fired each step of the animation),
-                    // you can use the `now` paramter which contains the current
-                    // animation-position (`0` up to `angle`)
                     logoRect.css({
                         transform: 'rotate(' + now + 'deg)'
                     });
@@ -71,7 +68,7 @@ jQuery(document).ready(function() {
             });
 
             innerRombText.eq(active).toggle();
-            innerRombText.eq(active + 1).toggle(200);
+            innerRombText.eq(active + 1).toggle();
 
 
             // text-container:
@@ -103,10 +100,24 @@ jQuery(document).ready(function() {
         if(active > 0) {
 
             // romb:
-            innerRombText.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
-            innerRombText.eq(active).animate({ width: 0 }, page_change_duration);
-            innerRombText.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
-            innerRombText.eq(active - 1).css({ opacity: 1 }, page_change_duration);
+            // innerRombText.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            // innerRombText.eq(active).animate({ width: 0 }, page_change_duration);
+            // innerRombText.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
+            // innerRombText.eq(active - 1).css({ opacity: 1 }, page_change_duration);
+
+
+            // logo animation:
+            $({deg: 45}).animate({deg: -405}, {
+                duration: 1000,
+                step: function(now) {
+                    logoRect.css({
+                        transform: 'rotate(' + now + 'deg)'
+                    });
+                }
+            });
+
+            innerRombText.eq(active).toggle();
+            innerRombText.eq(active - 1).toggle();
 
 
             // text-container:

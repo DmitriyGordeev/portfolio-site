@@ -119,8 +119,9 @@ main {
 }
 
 .inner-romb {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 38px;
+    left: 0px;
     display: inline-block;
     color: white;
     width: 100%;
@@ -128,8 +129,8 @@ main {
     margin: 0 auto;
     font-size: 25px;
     font-weight: 800;
-    background: blue;
-    transform: rotate(-45deg);
+    /*background: blue;*/
+    /*transform: rotate(-45deg);*/
 }
 
 #description-switcher {
