@@ -249,9 +249,9 @@ a:hover {
 #about-container {
     position: absolute;
     width: 500px;
-    height: 220px;
+    height: 600px;
     background: var(--dark-blue);
-    top: calc(50% - 180px);
+    top: calc(30% - 180px);
     left: calc(50% - 250px);
     padding: 8px;
     box-sizing: border-box;
