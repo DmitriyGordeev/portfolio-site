@@ -139,6 +139,11 @@ jQuery(document).ready(function() {
 
     // ---------------------------------------------------------------
     // menu buttons:
+    jQuery("#about-button").click(function() {
+        jQuery("#about-container").css({ visibility: "visible" });
+        jQuery("#about-container").animate({ opacity: 1 }, 200);
+    });
+
     jQuery("#feedback-button").click(function() {
         jQuery("#feedback-form-container").css({ visibility: "visible" });
         jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
@@ -147,6 +152,11 @@ jQuery(document).ready(function() {
     jQuery("#contacts-button").click(function() {
         jQuery("#contacts-container").css({ visibility: "visible" });
         jQuery("#contacts-container").animate({ opacity: 1 }, 200);
+    });
+
+    jQuery("#about-close-button").click(function() {
+        jQuery("#about-container").animate({ opacity: 0 }, 200);
+        setTimeout(function() { jQuery("#about-container").css({ visibility: "hidden" }); }, 200);
     });
 
     jQuery("#feedback-close-button").click(function() {
