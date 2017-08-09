@@ -41,8 +41,14 @@ jQuery(document).ready(function() {
 
 
     // ---------------------------------------------------------------
-    // change page events:
+    // page switch events:
     jQuery("#right-arrow").click(function() {
+
+        // hide arrow button for page change animation:
+        var btnElement = jQuery(this).toggle();
+        setTimeout(function() {
+            btnElement.toggle();
+        }, page_change_duration);
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
@@ -54,9 +60,7 @@ jQuery(document).ready(function() {
             $({deg: 45}).animate({deg: 405}, {
                 duration: 1000,
                 step: function(now) {
-                    logoRect.css({
-                        transform: 'rotate(' + now + 'deg)'
-                    });
+                    logoRect.css({ transform: 'rotate(' + now + 'deg)' });
                 }
             });
 
@@ -85,6 +89,12 @@ jQuery(document).ready(function() {
     });
 
     jQuery("#left-arrow").click(function() {
+
+        // hide arrow button for page change animation:
+        var btnElement = jQuery(this).toggle();
+        setTimeout(function() {
+            btnElement.toggle();
+        }, page_change_duration);
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
