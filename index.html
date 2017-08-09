@@ -150,7 +150,7 @@
 
         <!-- Feedback form -->
         <div id="feedback-form-container">
-            <form id="dialog" name="feedback-message">
+            <form id="dialog" name="feedback-message" action="send_email.php" method="post">
                 <p id="form-heading">Сообщение</p>
                 <div id="form-inner">
 
@@ -159,7 +159,7 @@
 
                     <br><br>
                     <label>Сообщение:</label>
-                    <textarea placeholder="Ваше сообщение" rows="9"></textarea>
+                    <textarea name="message" placeholder="Ваше сообщение" rows="9"></textarea>
                     <button id="feedback-submit-button">Отправить</button>
                 </div>
 
