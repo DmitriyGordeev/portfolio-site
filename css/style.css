@@ -163,6 +163,7 @@ main {
 .arrow:hover {
     transition-duration: 0.4s;
     background: var(--main-color);
+    cursor: pointer;
 }
 
 .arrow:active {
@@ -214,9 +215,9 @@ main {
 }
 
 .h-menu img:hover {
-    /*border: 6px solid #346b75;*/
     border: 6px solid #e6000a;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .h-menu li:nth-of-type(1) img {
