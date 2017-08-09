@@ -17,7 +17,7 @@
     <div id="page-viewport">
         <header>
             <ul id="top-menu">
-                <li><span class="bordered-span">Обо мне</span></li>
+                <li><span class="bordered-span" id="about-button">Обо мне</span></li>
                 <li><span class="bordered-span" id="feedback-button">Написать</span></li>
                 <li><span class="bordered-span" id="contacts-button">Контакты</span></li>
             </ul>
@@ -30,11 +30,12 @@
 
                 <!-- logo switching: -->
                 <div id="logo-switcher">
-                    <div class="box romb">
-                        <div class="inner-romb">Qt</div>
-                        <div class="inner-romb">OpenGl</div>
-                        <div class="inner-romb">?</div>
-                    </div>
+                    <div class="box romb"></div>
+
+                    <div class="inner-romb">Qt</div>
+                    <div class="inner-romb">OpenGl</div>
+                    <div class="inner-romb">Web</div>
+                    <div class="inner-romb">Web</div>
                 </div>
 
                 <div id="description-switcher">
@@ -42,7 +43,7 @@
                     <!-- first project -->
                     <p class="text-container" id="first">
                         <span style="font-weight: 800;">Парсер .xlsx таблиц</span><br><br>
-                        <span style="font-size: 20px; color: #858585">Находение товаров с учетом различия написания <br>
+                        <span style="font-size: 20px; color: #858585">Нахождение товаров с учетом различия написания <br>
                     из прайс-листов<br>
                     Поиск товаров с наименьшей ценой</span><br>
                         <br>
@@ -61,22 +62,31 @@
 
                     <!-- third project -->
                     <p class="text-container" id="third">
-                        <span style="font-weight: 800;">Третий проект</span><br><br>
-                        <span style="font-size: 20px; color: #858585">Описание третьего проекта <br>
-                    другое описание<br>
-                    И что-то еще</span><br>
+                        <span style="font-weight: 800;">Сервис постановки целей</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Простой способ поставить цель и <br>
+                                            сфокусироваться на выполнении<br>
+                                            Упор на визуальную часть</span><br>
                         <br>
-                        <a href="http://google.com">Gigtag</a>
+                        <a href="http://google.com">Проект</a>
+                        <!--<a href="http://google.com">Github</a>-->
+                    </p>
+
+                    <!-- fourth project -->
+                    <p class="text-container" id="fourth">
+                        <span style="font-weight: 800;">Этот сайт</span><br><br>
+                        <span style="font-size: 20px; color: #858585">Без сторонних CMS и движков</span><br>
+                        <br>
                     </p>
 
                 </div>
                 <img class="arrow" id="right-arrow" src="images/arrow_right.svg">
             </div>
+
             <div class="gallery-stripe">
                 <ul class="h-menu">
-                    <li><img src="images/excel-parser/main.png"></li>
-                    <li><img src="images/excel-parser/select_file.png"></li>
-                    <li><img src="images/excel-parser/refine_category.png"></li>
+                    <li><img class="zoom" src="images/excel-parser/main.png"></li>
+                    <li><img class="zoom" src="images/excel-parser/select_file.png"></li>
+                    <li><img class="zoom" src="images/excel-parser/refine_category.png"></li>
                 </ul>
             </div>
             <div class="gallery-stripe" style="background: #007fff">
@@ -98,14 +108,45 @@
                     </li>
                 </ul>
             </div>
-            <div class="gallery-stripe"  style="background: #ee5361">
+            <div class="gallery-stripe" style="background: #ee5361">
                 <ul class="h-menu">
-                    <li><img src="images/excel-parser/main.png"></li>
-                    <li><img src="images/excel-parser/select_file.png"></li>
-                    <li><img src="images/excel-parser/refine_category.png"></li>
+                    <li><img class="zoom" src="images/goal-service/goal-service-1.png"></li>
+                    <li><img class="zoom" src="images/goal-service/goal-service-2.png"></li>
+                    <li><img class="zoom" src="images/goal-service/goal-service-3.png"></li>
+                </ul>
+            </div>
+            <div class="gallery-stripe" style="background: #e5da33">
+                <ul class="h-menu">
+                    <li style="width: 40%"><span class="bottom-text" style="float: right">HTML</span></li>
+                    <li style="width: 14%"><span class="bottom-text">CSS</span></li>
+                    <li style="width: 46%"><span class="bottom-text" style="float: left">Javascript + jQuery</span></li>
                 </ul>
             </div>
         </main>
+
+        <div id="about-container">
+            <div id="about-inner-container">
+                <p class="beautiful-wrapper">Образование: МГУ им. М.В. Ломоносова, Физический факультет, год окончания 2016</p>
+                <p class="beautiful-wrapper">1 год коммерческой разработки в компании Beorg
+                    преимущественно на C++ и небольшие подпроекты на HTML, CSS, JS и Java</p>
+                <p class="beautiful-wrapper">В чем есть опыт:
+                    C++ (5 лет) , OpenGl<br>
+                    Java (Android),<br>
+                    Qt,<br>
+                    HTML, CSS, JS,<br>
+                    Matlab<br></p>
+                <p class="beautiful-wrapper">Небольшой опыт
+                    php, sql,<br> unreal engine 4</p>
+                <p class="beautiful-wrapper">В качестве vcs использую git, github
+                    Работал с Jira и bitbucket</p>
+                <p class="beautiful-wrapper">В планах изучения:
+                    ReactJS,
+                    AngularJS,
+                    Google Material Design</p>
+
+                <img id="about-close-button" src="images/cross-close.svg">
+            </div>
+        </div>
 
         <!-- Feedback form -->
         <div id="feedback-form-container">

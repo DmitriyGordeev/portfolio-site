@@ -103,7 +103,6 @@ main {
     left: 170px;
     display: inline-block;
     float: left;
-    background: black;
 }
 
 .box {
@@ -120,16 +119,18 @@ main {
 }
 
 .inner-romb {
-    position: relative;
-    float: left;
+    position: absolute;
+    top: 38px;
+    left: 0px;
     display: inline-block;
     color: white;
     width: 100%;
     text-align: center;
+    margin: 0 auto;
     font-size: 25px;
     font-weight: 800;
-    margin: auto auto;
-    transform: rotate(-45deg);
+    /*background: blue;*/
+    /*transform: rotate(-45deg);*/
 }
 
 #description-switcher {
@@ -191,8 +192,7 @@ main {
 
 .h-menu {
     list-style: none;
-    min-width: 500px;
-    max-width: 80%;
+    max-width: 100%;
     margin: 15px auto;
 }
 
@@ -210,10 +210,27 @@ main {
     height: 100%;
     border: 6px solid #34344a;
     box-sizing: border-box;
-    /*border-radius: 3px;*/
+    transition-duration: 0.3s;
 }
 
-/* testing reference: */
+.h-menu img:hover {
+    /*border: 6px solid #346b75;*/
+    border: 6px solid #e6000a;
+    transition-duration: 0.3s;
+}
+
+.h-menu li:nth-of-type(1) img {
+    float: right;
+}
+
+.h-menu li:nth-of-type(2) img {
+    margin: 0 auto;
+}
+
+.h-menu li:nth-of-type(3) img {
+    float: left;
+}
+
 a {
     font-size: 21px;
     text-decoration: none;
@@ -225,6 +242,41 @@ a {
 a:hover {
     transition-duration: 0.4s;
     text-decoration: underline;
+}
+
+/* --------------------------------------------------------------- */
+/* contacts form container: */
+#about-container {
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    background: var(--dark-blue);
+    top: calc(30% - 180px);
+    left: calc(50% - 250px);
+    padding: 8px;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+#about-inner-container {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--main-color);
+    box-sizing: border-box;
+    padding-top: 12px;
+}
+
+#about-inner-container p {
+    color: white;
+    width: 340px;
+    padding: 8px 10px;
+    margin: 10px 0 10px 25px;
+    display: inline-block;
+    float: left;
+}
+
+#about-close-button {
+    padding: 0;
 }
 
 
@@ -331,7 +383,7 @@ a:hover {
     transition-duration: 0.4s;
 }
 
-#feedback-close-button, #contacts-close-button {
+#about-close-button, #feedback-close-button, #contacts-close-button {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -342,7 +394,7 @@ a:hover {
     transition-duration: 0.4s;
 }
 
-#feedback-close-button:hover, #contacts-close-button:hover {
+#about-close-button:hover, #feedback-close-button:hover, #contacts-close-button:hover {
     background: #f14958;
     transition-duration: 0.4s;
 }
@@ -392,4 +444,20 @@ a:hover {
 /* testing figure animate: */
 figure.gif-animation {
     height: 100%;
+}
+
+.bottom-text {
+    font-size: 30px;
+    margin-top: 70px;
+    font-weight: 900;
+    display: inline-block;
+    /*background: blue;*/
+}
+
+.imageDialog {
+}
+
+.imageDialog img {
+    display: block;
+    margin: 0 auto;
 }

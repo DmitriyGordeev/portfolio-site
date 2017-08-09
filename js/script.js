@@ -9,10 +9,11 @@ jQuery(document).ready(function() {
 
 
     // inner-rombs:
-    var rombs = jQuery(".inner-romb");
-    if(rombs.length > 1) {
-        for(var i = 1; i < rombs.length; i++) {
-            rombs.eq(i).css({ width: 0, opacity: 0 });
+    var logoRect = jQuery(".romb");
+    var innerRombText = jQuery(".inner-romb");
+    if(innerRombText.length > 1) {
+        for(var i = 1; i < innerRombText.length; i++) {
+            innerRombText.eq(i).toggle();
         }
     }
 
@@ -40,20 +41,31 @@ jQuery(document).ready(function() {
 
 
     // ---------------------------------------------------------------
-    // change page events:
+    // page switch events:
     jQuery("#right-arrow").click(function() {
+
+        // hide arrow button for page change animation:
+        var btnElement = jQuery(this).toggle();
+        setTimeout(function() {
+            btnElement.toggle();
+        }, page_change_duration);
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
-        var rombWidth = rombs.eq(active).width();
+        var rombWidth = innerRombText.eq(active).width();
 
         if(active < containers.length - 1) {
 
-            // romb:
-            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
-            rombs.eq(active).animate({ width: 0 }, page_change_duration);
-            rombs.eq(active + 1).css({ opacity: 1 });
-            rombs.eq(active + 1).animate({ width: rombWidth }, page_change_duration);
+            // logo animation:
+            $({deg: 45}).animate({deg: 405}, {
+                duration: 1000,
+                step: function(now) {
+                    logoRect.css({ transform: 'rotate(' + now + 'deg)' });
+                }
+            });
+
+            innerRombText.eq(active).toggle();
+            innerRombText.eq(active + 1).toggle();
 
 
             // text-container:
@@ -78,17 +90,30 @@ jQuery(document).ready(function() {
 
     jQuery("#left-arrow").click(function() {
 
+        // hide arrow button for page change animation:
+        var btnElement = jQuery(this).toggle();
+        setTimeout(function() {
+            btnElement.toggle();
+        }, page_change_duration);
+
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
-        var rombWidth = rombs.eq(active).width();
+        var rombWidth = innerRombText.eq(active).width();
 
         if(active > 0) {
 
-            // romb:
-            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
-            rombs.eq(active).animate({ width: 0 }, page_change_duration);
-            rombs.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
-            rombs.eq(active - 1).css({ opacity: 1 }, page_change_duration);
+            // logo animation:
+            $({deg: 45}).animate({deg: -405}, {
+                duration: 1000,
+                step: function(now) {
+                    logoRect.css({
+                        transform: 'rotate(' + now + 'deg)'
+                    });
+                }
+            });
+
+            innerRombText.eq(active).toggle();
+            innerRombText.eq(active - 1).toggle();
 
 
             // text-container:
@@ -114,6 +139,11 @@ jQuery(document).ready(function() {
 
     // ---------------------------------------------------------------
     // menu buttons:
+    jQuery("#about-button").click(function() {
+        jQuery("#about-container").css({ visibility: "visible" });
+        jQuery("#about-container").animate({ opacity: 1 }, 200);
+    });
+
     jQuery("#feedback-button").click(function() {
         jQuery("#feedback-form-container").css({ visibility: "visible" });
         jQuery("#feedback-form-container").animate({ opacity: 1 }, 200);
@@ -122,6 +152,11 @@ jQuery(document).ready(function() {
     jQuery("#contacts-button").click(function() {
         jQuery("#contacts-container").css({ visibility: "visible" });
         jQuery("#contacts-container").animate({ opacity: 1 }, 200);
+    });
+
+    jQuery("#about-close-button").click(function() {
+        jQuery("#about-container").animate({ opacity: 0 }, 200);
+        setTimeout(function() { jQuery("#about-container").css({ visibility: "hidden" }); }, 200);
     });
 
     jQuery("#feedback-close-button").click(function() {
@@ -133,7 +168,6 @@ jQuery(document).ready(function() {
         jQuery("#contacts-container").animate({ opacity: 0 }, 200);
         setTimeout(function() { jQuery("#contacts-container").css({ visibility: "hidden" }); }, 200);
     });
-
 
 
     // Gif animation on click:
@@ -153,5 +187,18 @@ jQuery(document).ready(function() {
             image.attr("src", imageDataAlt).attr("data-alt", image.data("alt"));
         }
     });
+
+
+    // Image zoom on click:
+    jQuery("img.zoom").click(function() {
+        jQuery(this).dialog({
+            modal: true,
+            width: 1500 * 0.6,
+            height: 800 * 0.6,
+            dialogClass: "imageDialog",
+            close: function() { $(this).dialog("destroy"); }
+        });
+    });
+
 
 });
