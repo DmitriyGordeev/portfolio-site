@@ -418,3 +418,11 @@ figure.gif-animation {
     display: inline-block;
     /*background: blue;*/
 }
+
+.imageDialog {
+}
+
+.imageDialog img {
+    display: block;
+    margin: 0 auto;
+}

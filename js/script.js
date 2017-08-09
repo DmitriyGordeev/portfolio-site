@@ -175,6 +175,7 @@ jQuery(document).ready(function() {
             modal: true,
             width: 1500 * 0.6,
             height: 800 * 0.6,
+            dialogClass: "imageDialog",
             close: function() { $(this).dialog("destroy"); }
         });
     });
