@@ -103,7 +103,6 @@ main {
     left: 170px;
     display: inline-block;
     float: left;
-    background: black;
 }
 
 .box {
@@ -126,9 +125,10 @@ main {
     color: white;
     width: 100%;
     text-align: center;
+    margin: 0 auto;
     font-size: 25px;
     font-weight: 800;
-    margin: auto auto;
+    background: blue;
     transform: rotate(-45deg);
 }
 

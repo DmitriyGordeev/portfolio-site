@@ -9,10 +9,11 @@ jQuery(document).ready(function() {
 
 
     // inner-rombs:
-    var rombs = jQuery(".inner-romb");
-    if(rombs.length > 1) {
-        for(var i = 1; i < rombs.length; i++) {
-            rombs.eq(i).css({ width: 0, opacity: 0 });
+    var logoRect = jQuery(".romb");
+    var innerRombText = jQuery(".inner-romb");
+    if(innerRombText.length > 1) {
+        for(var i = 1; i < innerRombText.length; i++) {
+            innerRombText.eq(i).toggle();
         }
     }
 
@@ -45,15 +46,32 @@ jQuery(document).ready(function() {
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
-        var rombWidth = rombs.eq(active).width();
+        var rombWidth = innerRombText.eq(active).width();
 
         if(active < containers.length - 1) {
 
             // romb:
-            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
-            rombs.eq(active).animate({ width: 0 }, page_change_duration);
-            rombs.eq(active + 1).css({ opacity: 1 });
-            rombs.eq(active + 1).animate({ width: rombWidth }, page_change_duration);
+            // rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            // rombs.eq(active).animate({ width: 0 }, page_change_duration);
+            // rombs.eq(active + 1).css({ opacity: 1 });
+            // rombs.eq(active + 1).animate({ width: rombWidth }, page_change_duration);
+
+
+            // logo animation:
+            $({deg: 45}).animate({deg: 405}, {
+                duration: 1000,
+                step: function(now) {
+                    // in the step-callback (that is fired each step of the animation),
+                    // you can use the `now` paramter which contains the current
+                    // animation-position (`0` up to `angle`)
+                    logoRect.css({
+                        transform: 'rotate(' + now + 'deg)'
+                    });
+                }
+            });
+
+            innerRombText.eq(active).toggle();
+            innerRombText.eq(active + 1).toggle(200);
 
 
             // text-container:
@@ -80,15 +98,15 @@ jQuery(document).ready(function() {
 
         var containerWidth = containers.eq(active).width();
         var stripeWidth = stripes.eq(active).width();
-        var rombWidth = rombs.eq(active).width();
+        var rombWidth = innerRombText.eq(active).width();
 
         if(active > 0) {
 
             // romb:
-            rombs.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
-            rombs.eq(active).animate({ width: 0 }, page_change_duration);
-            rombs.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
-            rombs.eq(active - 1).css({ opacity: 1 }, page_change_duration);
+            innerRombText.eq(active).animate({ opacity: 0 }, page_change_duration * 0.3);
+            innerRombText.eq(active).animate({ width: 0 }, page_change_duration);
+            innerRombText.eq(active - 1).animate({ width: rombWidth }, page_change_duration);
+            innerRombText.eq(active - 1).css({ opacity: 1 }, page_change_duration);
 
 
             // text-container:
@@ -163,7 +181,6 @@ jQuery(document).ready(function() {
             close: function() { $(this).dialog("destroy"); }
         });
     });
-
 
 
 });
