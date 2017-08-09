@@ -214,7 +214,8 @@ main {
 }
 
 .h-menu img:hover {
-    border: 6px solid #346b75;
+    /*border: 6px solid #346b75;*/
+    border: 6px solid #ff000a;
     transition-duration: 0.3s;
 }
 
@@ -230,8 +231,6 @@ main {
     float: left;
 }
 
-
-/* testing reference: */
 a {
     font-size: 21px;
     text-decoration: none;
