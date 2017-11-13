@@ -265,6 +265,7 @@ a:hover {
     border: 5px solid var(--main-color);
     box-sizing: border-box;
     padding-top: 12px;
+    line-height: 22px;
 }
 
 #about-inner-container p {
@@ -279,7 +280,6 @@ a:hover {
 #about-close-button {
     padding: 0;
 }
-
 
 /* --------------------------------------------------------------- */
 /* dialog form layout: */
